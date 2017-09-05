@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:baselineAligned="false"
     android:orientation="horizontal">
 
-    <include
-        layout="@layout/person_info_layout"
-        android:layout_width="0dp"
-        android:layout_height="fill_parent"
-        android:layout_weight="@integer/person_info_part_weight" />
-
-    <ListView
-        android:id="@+id/employees_view"
+    <LinearLayout
+        android:id="@+id/person_information_part"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="@integer/person_list_part_weight" />
+        android:layout_weight="@integer/person_information_part_weight"
+        android:gravity="center"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:id="@+id/list_part"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="@integer/list_part_weight"
+        android:gravity="center"
+        android:orientation="vertical" />
+
 </LinearLayout>

@@ -4,6 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -17,6 +18,12 @@ public class Employee implements Parcelable {
         this.name = name;
         this.surname = surname;
         this.skills = new ArrayList<>();
+    }
+
+    public Employee(String name, String surname, String[] newSkills) {
+        this.name = name;
+        this.surname = surname;
+        skills = new ArrayList<>(Arrays.asList(newSkills));
     }
 
     protected Employee(Parcel in) {
@@ -51,6 +58,7 @@ public class Employee implements Parcelable {
 
     public String getSkills() {
         StringBuilder stringBuilder = new StringBuilder();
+
         for (String employeeSkill : skills) {
             stringBuilder.append(employeeSkill);
             stringBuilder.append("\n");

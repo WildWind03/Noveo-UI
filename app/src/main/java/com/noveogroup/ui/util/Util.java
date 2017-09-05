@@ -6,13 +6,13 @@ import java.util.List;
 
 public class Util {
 
+    private static final int COUNT_OF_EMPLOYEES = 20;
+
     private Util() {
 
     }
 
-    private static final int COUNT_OF_EMPLOYEES = 20;
-
-    public static void init(List<Employee> employees) {
+    public static void fillEmployeeList(List<Employee> employees) {
         Employee sasha = new Employee("Alexander", "Chirikhin");
         sasha.addSkill("Java");
         sasha.addSkill("C++");

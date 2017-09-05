@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <integer name="max_skills_length">60</integer>
-    <integer name="max_count_of_lines_in_skills">8</integer>
-    <integer name="person_info_part_weight">3</integer>
-    <integer name="person_list_part_weight">5</integer>
+    <integer name="skill_field_max_length">60</integer>
+    <integer name="max_count_of_lines">8</integer>
+    <integer name="list_part_weight">5</integer>
+    <integer name="person_information_part_weight">3</integer>
 </resources>

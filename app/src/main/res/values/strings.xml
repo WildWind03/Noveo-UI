@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">UI</string>
+    <string name="example_name">Barsik</string>
+    <string name="example_list_of_skills">Cat\nFighting\nRunning</string>
+    <string name="name_surname_template">%1$s %2$s</string>
+    <string name="edit_skills_button">Edit skills</string>
+    <string name="edit_skills_dialog_title">Type skills</string>
+    <string name="ok_text">Ok</string>
+</resources>

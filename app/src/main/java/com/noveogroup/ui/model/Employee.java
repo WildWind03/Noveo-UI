@@ -3,12 +3,11 @@ package com.noveogroup.ui.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Employee implements Parcelable {
+public class Employee implements Parcelable{
     private final String name;
     private final String surname;
     private List<String> skills;
@@ -16,7 +15,14 @@ public class Employee implements Parcelable {
     public Employee(String name, String surname) {
         this.name = name;
         this.surname = surname;
-        this.skills = new ArrayList<>();
+        this.skills =  new LinkedList<>();
+    }
+
+    public Employee(String name, String surname, String[] newSkills)
+    {
+        this.name = name;
+        this.surname = surname;
+        skills = Arrays.asList(newSkills);
     }
 
     protected Employee(Parcel in) {
@@ -56,7 +62,7 @@ public class Employee implements Parcelable {
             stringBuilder.append("\n");
         }
 
-        return stringBuilder.toString().trim();
+        return stringBuilder.toString();
     }
 
     @Override
@@ -64,15 +70,17 @@ public class Employee implements Parcelable {
         return name + " " + surname;
     }
 
-    private void clearSkills() {
-        skills.clear();
+    public void clearSkills() {
+        skills.clear();;
     }
 
     public void setSkills(String newSkills) {
         clearSkills();
         String[] skillArr = newSkills.split("\n");
 
-        Collections.addAll(skills, skillArr);
+        for(String str : skillArr) {
+            skills.add(str);
+        }
     }
 
     @Override

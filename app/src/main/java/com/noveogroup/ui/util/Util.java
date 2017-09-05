@@ -44,9 +44,4 @@ public class Util {
             employees.add(employee);
         }
     }
-
-    public static int getCountOfLinesInString(String string) {
-        String[] lines = string.split("\r\n|\r|\n");
-        return lines.length;
-    }
 }

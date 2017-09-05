@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
+    android:layout_weight="2"
     android:fillViewport="true">
 
-    <LinearLayout
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -17,24 +21,39 @@
             style="@style/Base.TextAppearance.AppCompat.Large"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="6dp"
             android:gravity="center_horizontal"
-            android:text="@string/example_name" />
+            android:text="@string/example_name"
+            app:layout_constraintLeft_toLeftOf="@+id/constraintLayout2"
+            app:layout_constraintRight_toRightOf="@+id/constraintLayout2"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout2"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1" />
 
         <TextView
             android:id="@+id/person_skills"
             style="@style/Base.TextAppearance.AppCompat.Medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
             android:gravity="center_horizontal"
-            android:text="@string/example_list_of_skills" />
+            android:text="@string/example_list_of_skills"
+            app:layout_constraintLeft_toLeftOf="@+id/constraintLayout2"
+            app:layout_constraintRight_toRightOf="@+id/constraintLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/person_name"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1" />
 
         <Button
             android:id="@+id/edit_skills_button"
             style="@style/Base.TextAppearance.AppCompat.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/edit_skills_button" />
-    </LinearLayout>
+            android:text="@string/edit_skills_button"
+            app:layout_constraintLeft_toLeftOf="@+id/constraintLayout2"
+            app:layout_constraintRight_toRightOf="@+id/constraintLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/person_skills" />
+    </android.support.constraint.ConstraintLayout>
 </ScrollView>
